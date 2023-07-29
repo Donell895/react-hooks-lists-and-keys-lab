@@ -1,19 +1,15 @@
 import React from "react";
-import NavBar from "./NavBar";
-import Home from "./Home";
-import About from "./About";
-import ProjectList from "./ProjectList";
-import user from "../data/user";
 
-function App() {
+function ProjectItem({ name, about, technologies }) {
   return (
-    <div>
-      <NavBar />
-      <Home username={user.name} city={user.city} color={user.color} />
-      <About bio={user.bio} links={user.links} />
-      <ProjectList projects={user.projects} />
+    <div className="project-item">
+      <h3>{name}</h3>
+      <p>{about}</p>
+      <div className="technologies">
+        {/* render a <span> for each technology in the technologies array */}
+      </div>
     </div>
   );
 }
 
-export default App;
+export default ProjectItem;
